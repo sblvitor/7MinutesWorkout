@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinishActivity"
+    android:background="@color/grayBG">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarFinish"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        android:background="@color/grayBG"
+        app:titleTextColor="@color/white"
+        />
+
+    <TextView
+        android:id="@+id/tvEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarFinish"
+        android:text="@string/end"
+        android:textColor="@color/color_accent"
+        android:textSize="35sp"
+        android:layout_marginTop="35dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/flDone"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEnd"
+        app:layout_constraintBottom_toTopOf="@id/tvCongrats"
+        android:background="@drawable/custom_button_stroke_accent"
+        android:layout_margin="10dp"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/done_image"
+            android:src="@drawable/done"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvCongrats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flDone"
+        app:layout_constraintBottom_toBottomOf="@id/tvFinished"
+        android:text="@string/congratulations"
+        android:textColor="@color/light_gray_ripple"
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        />
+
+    <TextView
+        android:id="@+id/tvFinished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCongrats"
+        app:layout_constraintBottom_toTopOf="@id/btnFinish"
+        android:text="@string/you_have_finished_the_workout"
+        android:textColor="@color/light_gray_ripple"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFinished"
+        android:text="@string/finish"
+        android:textSize="18sp"
+        android:backgroundTint="@color/color_accent"
+        android:textColor="@color/white"
+        android:layout_margin="30dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
