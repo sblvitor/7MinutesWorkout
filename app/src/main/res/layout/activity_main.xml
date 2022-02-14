@@ -39,7 +39,7 @@
         android:layout_height="70dp"
         app:layout_constraintTop_toBottomOf="@id/btnStart"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ibHistory"
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="@string/bmi"
         android:textSize="22sp"
@@ -49,13 +49,43 @@
         />
 
     <TextView
+        android:id="@+id/tvCalculator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/btnBMI"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btnBMI"
+        app:layout_constraintStart_toStartOf="@id/btnBMI"
         android:layout_marginTop="5dp"
         android:text="@string/calculator"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        />
+
+    <android.widget.ImageButton
+        android:id="@+id/ibHistory"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintStart_toEndOf="@id/btnBMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnStart"
+        android:background="@drawable/item_circular_color_accent_background"
+        android:src="@drawable/calendar"
+        android:scaleType="fitXY"
+        android:padding="16dp"
+        android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ibHistory"
+        app:layout_constraintEnd_toEndOf="@id/ibHistory"
+        app:layout_constraintStart_toStartOf="@id/ibHistory"
+        android:layout_marginTop="5dp"
+        android:text="@string/history"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"

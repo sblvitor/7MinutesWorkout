@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, BMIActivity::class.java)
             startActivity(intent)
         }
+
+        binding?.ibHistory?.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Maneira clean de evitar memory leak. Toda vez que usar binding, setar ela para nulo
